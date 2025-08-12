@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome - Django Login System{% endblock %}
+
+{% block content %}
+<h2>Login Successful!</h2>
+<div class="alert alert-success">
+    <h3>Welcome, {{ user.username }}!</h3>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p>You have successfully logged into the system.</p>
+</div>
+<div>
+    <a href="{% url 'login' %}" class="btn">Login Again</a>
+    <a href="{% url 'signup' %}" class="btn" style="background-color: #28a745;">Create New Account</a>
+</div>
+{% endblock %}
